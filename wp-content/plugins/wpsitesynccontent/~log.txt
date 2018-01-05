@@ -110,3 +110,12 @@
 2018-01-04 18:23:22#41 - SyncApiModel::render() api=''
 2018-01-04 18:32:29#34 - SyncApiModel::render() api=''
 2018-01-04 18:32:31#36 - SyncApiModel::render() api=''
+2018-01-05 08:49:36#87 - WPSiteSyncContent::filter_upgrader_download() package='https://downloads.wordpress.org/plugin/widget-settings-importexport.1.5.3.zip'
+2018-01-05 08:49:36#87 - WPSiteSyncContent::filter_unique_filename() filename=widget-settings-importexport.1.5.3-XBKC00.tmp ext=.tmp dir=/var/folders/tc/wh8yv4dd28bgqm0q9sbpbrj40000gn/T/
+2018-01-05 13:20:16#13 - SyncModel::remove_all_sync_data() sql=DELETE FROM `wp_spectrom_sync`
+			WHERE (`source_content_id`=3229 AND `site_key`='3f7cc4834cf4505da23e163e8130fb94') OR
+				(`target_content_id`=3229 AND `target_site_key`='3f7cc4834cf4505da23e163e8130fb94')
+2018-01-05 13:37:44#38 - SyncApiModel::render() api=''
+2018-01-05 13:37:46#25 - SyncApiModel::render() api=''
+2018-01-05 13:40:05#74 - SyncApiModel::render() api=''
+2018-01-05 13:40:06#34 - SyncApiModel::render() api=''
