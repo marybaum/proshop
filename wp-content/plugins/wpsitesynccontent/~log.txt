@@ -1,0 +1,112 @@
+2018-01-04 15:30:15#30 - SyncActivate::create_database_tables()
+2018-01-04 15:30:15#30 - SyncActivate::create_database_tables() sql=CREATE TABLE `wp_spectrom_sync_log` (
+					`id` 				INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+					`post_id` 			BIGINT(20) UNSIGNED NOT NULL,
+					`post_title` 		TEXT NOT NULL,
+					`push_date` 		TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+					`operation`			VARCHAR(32) NOT NULL,
+					`source_user` 		BIGINT(20) UNSIGNED NOT NULL,
+					`source_site` 		VARCHAR(200) NOT NULL,
+					`source_site_key`	VARCHAR(40) NOT NULL,
+					`target_user`		BIGINT(20) UNSIGNED NOT NULL,
+
+					PRIMARY KEY (`id`),
+					INDEX `post_id` (`post_id`)
+				)DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci
+2018-01-04 15:30:16#30 - SyncActivate::create_database_tables() dbDelta() results: 
+2018-01-04 15:30:16#30 - SyncActivate::create_database_tables() sql=CREATE TABLE `wp_spectrom_sync` (
+					`sync_id` 			INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+					`site_key` 			VARCHAR(60) NOT NULL,
+					`source_content_id` BIGINT(20) UNSIGNED NOT NULL,
+					`target_content_id`	BIGINT(20) UNSIGNED NOT NULL,
+					`target_site_key`	VARCHAR(60) NULL DEFAULT '',
+					`content_type`		VARCHAR(32) NOT NULL DEFAULT 'post',
+					`last_update`		DATETIME NOT NULL,
+					`wp_version`		VARCHAR(20) NOT NULL,
+					`sync_version`		VARCHAR(20) NOT NULL,
+
+					PRIMARY KEY (`sync_id`),
+					INDEX `source_content_id` (`source_content_id`),
+					INDEX `target_content_id` (`target_content_id`),
+					INDEX `content_type` (`content_type`)
+				)DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci
+2018-01-04 15:30:16#30 - SyncActivate::create_database_tables() dbDelta() results: 
+2018-01-04 15:30:16#30 - SyncActivate::create_database_tables() sql=CREATE TABLE `wp_spectrom_sync_sources` (
+					`id`				INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+					`domain`			VARCHAR(200) NOT NULL,
+					`site_key`			VARCHAR(60) NOT NULL DEFAULT '',
+					`auth_name`			VARCHAR(60) NOT NULL,
+					`token`				VARCHAR(60) NOT NULL,
+					`allowed`			TINYINT(1) UNSIGNED NOT NULL DEFAULT '1',
+					PRIMARY KEY (`id`),
+					INDEX `site_key` (`site_key`),
+					INDEX `allowed` (`allowed`)
+				)DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci
+2018-01-04 15:30:16#30 - SyncActivate::create_database_tables() dbDelta() results: 
+2018-01-04 15:30:16#30 - SyncActivate::create_database_tables() sql=CREATE TABLE `wp_spectrom_sync_media` (
+					`id`				INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+					`site_key` 			VARCHAR(60) NOT NULL,
+					`remote_media_name` VARCHAR(255) NOT NULL,
+					`local_media_name`	VARCHAR(255) NOT NULL,
+
+					PRIMARY KEY (`id`),
+					INDEX `site_key` (`site_key`)
+				)DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci
+2018-01-04 15:30:16#30 - SyncActivate::create_database_tables() dbDelta() results: 
+2018-01-04 15:30:16#30 - SyncActivate::create_database_tables() - done
+2018-01-04 16:43:27#61 - SyncApiModel::render() api=''
+2018-01-04 16:43:29#32 - SyncApiModel::render() api=''
+2018-01-04 16:43:48#43 - SyncApiModel::render() api=''
+2018-01-04 16:43:49#58 - SyncApiModel::render() api=''
+2018-01-04 16:44:02#60 - SyncApiModel::render() api=''
+2018-01-04 16:44:03#23 - SyncApiModel::render() api=''
+2018-01-04 16:44:54#56 - SyncApiModel::render() api=''
+2018-01-04 16:44:55#38 - SyncApiModel::render() api=''
+2018-01-04 16:52:06#66 - SyncApiModel::render() api=''
+2018-01-04 16:52:38#12 - SyncApiModel::render() api=''
+2018-01-04 16:52:39#79 - SyncApiModel::render() api=''
+2018-01-04 16:52:54#73 - SyncApiModel::render() api=''
+2018-01-04 16:52:55#82 - SyncApiModel::render() api=''
+2018-01-04 16:52:56#83 - SyncApiModel::render() api=''
+2018-01-04 17:04:56#79 - WPSiteSyncContent::filter_unique_filename() filename=comp-shoes-2.jpg ext=.jpg dir=/Users/marybaum/Sites/servpressinstalls/proshop.test/wp-content/uploads/2018/01
+2018-01-04 17:06:31#10 - SyncApiModel::render() api=''
+2018-01-04 17:06:32#17 - SyncApiModel::render() api=''
+2018-01-04 17:07:09#19 - SyncApiModel::render() api=''
+2018-01-04 17:07:10#79 - SyncApiModel::render() api=''
+2018-01-04 17:09:33#51 - SyncApiModel::render() api=''
+2018-01-04 17:09:34#99 - SyncApiModel::render() api=''
+2018-01-04 17:09:35#30 - SyncApiModel::render() api=''
+2018-01-04 17:10:03#57 - SyncApiModel::render() api=''
+2018-01-04 17:10:04#58 - SyncApiModel::render() api=''
+2018-01-04 17:23:16#96 - SyncApiModel::render() api=''
+2018-01-04 17:23:17#18 - SyncApiModel::render() api=''
+2018-01-04 17:30:59#25 - WPSiteSyncContent::filter_upgrader_download() package='https://downloads.wordpress.org/plugin/connect-genesis-woocommerce.6.0.zip'
+2018-01-04 17:30:59#25 - WPSiteSyncContent::filter_unique_filename() filename=connect-genesis-woocommerce.6.0-29z1n5.tmp ext=.tmp dir=/var/folders/tc/wh8yv4dd28bgqm0q9sbpbrj40000gn/T/
+2018-01-04 17:39:27#19 - SyncApiModel::render() api=''
+2018-01-04 17:39:28#52 - SyncApiModel::render() api=''
+2018-01-04 17:39:29#44 - SyncApiModel::render() api=''
+2018-01-04 17:39:56#10 - SyncApiModel::render() api=''
+2018-01-04 17:39:57#25 - SyncApiModel::render() api=''
+2018-01-04 17:39:58#86 - SyncApiModel::render() api=''
+2018-01-04 17:40:17#88 - SyncApiModel::render() api=''
+2018-01-04 17:40:20#41 - SyncApiModel::render() api=''
+2018-01-04 17:40:25#78 - SyncApiModel::render() api=''
+2018-01-04 17:40:27#17 - SyncApiModel::render() api=''
+2018-01-04 17:40:32#85 - SyncApiModel::render() api=''
+2018-01-04 17:40:34#69 - SyncApiModel::render() api=''
+2018-01-04 17:42:30#81 - SyncApiModel::render() api=''
+2018-01-04 17:42:32#35 - SyncApiModel::render() api=''
+2018-01-04 17:42:46#54 - SyncApiModel::render() api=''
+2018-01-04 17:42:47#90 - SyncApiModel::render() api=''
+2018-01-04 17:50:46#34 - SyncApiModel::render() api=''
+2018-01-04 17:50:47#20 - SyncApiModel::render() api=''
+2018-01-04 18:12:54#35 - SyncApiModel::render() api=''
+2018-01-04 18:12:55#85 - SyncApiModel::render() api=''
+2018-01-04 18:12:57#16 - SyncApiModel::render() api=''
+2018-01-04 18:14:26#78 - SyncApiModel::render() api=''
+2018-01-04 18:17:02#73 - SyncApiModel::render() api=''
+2018-01-04 18:17:03#52 - SyncApiModel::render() api=''
+2018-01-04 18:23:21#14 - SyncApiModel::render() api=''
+2018-01-04 18:23:22#41 - SyncApiModel::render() api=''
+2018-01-04 18:32:29#34 - SyncApiModel::render() api=''
+2018-01-04 18:32:31#36 - SyncApiModel::render() api=''
