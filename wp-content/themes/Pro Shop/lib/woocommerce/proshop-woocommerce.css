@@ -404,6 +404,15 @@ Loaded on WooCommerce pages */
 /* WooCommerce Product
 ---------------------------------------------------------------------------------------------------- */
 @media all and (min-width: 0) {
+	
+	.single-product h1.entry-title {
+		color: #006;
+		font-size: 1.4rem;
+		font-weight: 800;
+		letter-spacing: -1px;
+		margin: 0;
+		text-align: left;
+	}
 
 	.woocommerce #content div.product div.images,
 	.woocommerce #content div.product div.summary,
@@ -461,6 +470,18 @@ Loaded on WooCommerce pages */
 		width: 62vw;
 		z-index: 400;
 		top: 15rem;
+	}
+	
+	.woocommerce.single-product div.product div.summary,
+	.woocommerce-page .product .summary,
+	.single-product .entry .summary {
+		display: grid;
+		grid-column: 1/4;
+		grid-template-columns: 1fr;
+		margin: 3.5rem 0 0;
+		padding: 0 30vw 0 0;
+		z-index: 289;
+		background: #fff;
 	}
 	
 	.woocommerce .product p.price,
