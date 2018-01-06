@@ -1241,7 +1241,8 @@ th:first-child {
 	}
 	
 	.content,
-	.archive .content {
+	.archive .content,
+	.single .content {
 		display: grid;
 		grid-template-columns: 1fr 2fr 2fr;
 	}
@@ -1565,7 +1566,11 @@ th:first-child {
 	.breadcrumb,
 	.woocommerce .breadcrumb {
 		grid-row: 1;
-		grid-column: 2;
+		grid-column: 2/4;
+	}
+	
+	.single .breadcrumb {
+		padding: 0 3vw;
 	}
 }
 
@@ -1684,8 +1689,7 @@ th:first-child {
 		display: grid;
 		font-size: 2.4rem;
 		letter-spacing: -2px;
-		margin: 8rem 12vw 4rem 20vw;
-		text-align: right;
+		margin: 12rem 9vw 0 33vw
 	}
 	
 	.entry-title a,
@@ -2039,8 +2043,16 @@ th:first-child {
 }
 
 @media all and (min-width: 38em) {
+	
 	.single .entry {
-		grid-column: 2;
+		grid-column: 2/4;
+		padding: 1em 3vw 1rem;
+	}
+	
+	.single .entry p.intro {
+		font-size: 1.2rem;
+		font-weight: 600;
+		margin-left: 7vw;
 	}
 }
 
@@ -2181,6 +2193,7 @@ p.entry-meta {
 	
 	.comment-respond,
 	.entry-pings {
+		grid-row: 3;
 		padding: 0;
 	}
 	
