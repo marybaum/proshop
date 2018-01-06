@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" serverName="mommacodes.com" exclude=".svn;.cvs;.idea;.DS_Store;.git;.hg;.psd;.mov">
+  <component name="PublishConfigData" autoUpload="Always" serverName="mommacodes.com" uploadOnCheckin="8c4cdecd-64eb-40a3-af6c-71a553245a78" exclude=".svn;.cvs;.idea;.DS_Store;.git;.hg;.psd;.mov">
     <serverData>
       <paths name="mommacodes.com">
         <serverdata>
@@ -10,5 +10,7 @@
         </serverdata>
       </paths>
     </serverData>
+    <option name="myUploadOnCheckinName" value="mommacodes.com" />
+    <option name="myAutoUpload" value="ALWAYS" />
   </component>
 </project>
