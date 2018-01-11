@@ -12,7 +12,7 @@ Loaded on WooCommerce pages */
 	.archive.woocommerce .products ul,
 	.archive.woocommerce ul.products {
 		display: grid;
-		grid-column: 1/4;
+		grid-column: 2;
 		grid-gap: 0;
 		list-style: none;
 		margin: 0;
@@ -38,14 +38,16 @@ Loaded on WooCommerce pages */
 	.woocommerce ul.products li.product .woocommerce-loop-product__title,
 	.woocommerce ul.products li.product h3,
 	.woocommerce ul.products li.product h2 {
-		background: linear-gradient(rgba(0,40,60,1.1),rgba(0,40,60,0));
+		background: linear-gradient(rgba(0,40,60,.6),rgba(0,40,60,0));
 		color:  #fff;
 		font:  normal 400 1.6rem/.9 'Abhaya Libre' , serif;
 		position: absolute;
+		height: 7rem;
 		top: 0;
 		right: 0;
 		left: 0;
-		padding: 1rem 0.7rem 3rem 7rem;
+		padding: 0 3vw 3.5rem 30vw;
+		text-align: right;
 	}
 	
 	.woocommerce ul.products li.product a img {
@@ -98,7 +100,7 @@ Loaded on WooCommerce pages */
 		color: #fff;
 		font-weight:800;
 		padding: 0 0 0 1.3rem;
-		text-align: -webkit-auto;
+		text-align: left;
 		width: 35vw;
 		line-height: 1;
 		z-index: 900;
@@ -113,6 +115,15 @@ Loaded on WooCommerce pages */
 
 @media all and (min-width: 38em) {
 	
+	.archive h1.page-title,
+	article.page h1.entry-title,
+	article.page h1.entry-title,
+	.archive.woocommerce h1.page-title {
+		grid-column: 2/4;
+		margin: .25rem 3vw 0;
+		padding: 0;
+	}
+	
 	.after-entry,
 	.author-box {
 		font-size: 1rem;
@@ -120,22 +131,23 @@ Loaded on WooCommerce pages */
 		grid-column: 2;
 	}
 	
-	/*
-	.woocommerce form .form-row-first,
-	.woocommerce form .form-row-last,
-	.woocommerce #reviews #comments .star-rating,
-	.woocommerce-page form .form-row-first,
-	.woocommerce-page form .form-row-last {
-		display: grid;
-		width: 100%;
-	}
-	*/
-	
 	.archive.woocommerce .products ul,
 	.archive.woocommerce ul.products {
+		display: grid;
+		grid-column: 2/4;
+		grid-gap: 0;
+		grid-template-columns: 1fr 1fr;
 		grid-auto-flow: row;
-		grid-column-start: 2;
-		grid-row-start: 3;
+	}
+	
+	.woocommerce ul.products li.product:nth-child(2n) {
+		grid-column: 2/3;
+	}
+	
+	.woocommerce ul.products li.product {
+		grid-column: 1/2;
+		display: flex;
+		flex-flow: column;
 	}
 	
 	.woocommerce ul.products li.product a {
@@ -143,11 +155,15 @@ Loaded on WooCommerce pages */
 	}
 	
 	.woocommerce ul.products li.product .woocommerce-loop-category__title,
-	.woocommerce ul.products li.product .woocommerce-loop-product__title,
-	.woocommerce ul.products li.product h3,
-	.woocommerce ul.products li.product h2 {
+	.woocommerce ul.products li.product h3 {
 		text-align: right;
 		padding: 1.5vw 3vw;
+	}
+	
+	h2.woocommerce-loop-product__title,
+	.woocommerce ul.products li.product h2 {
+		text-align: right;
+		padding: 0 3vw 3.5rem 30vw;
 	}
 }
 
@@ -257,7 +273,9 @@ Loaded on WooCommerce pages */
 	}
 	
 	.archive.tax-product_cat h1.archive-title {
+		font-size: 4rem;
 		grid-column: 2/4;
+		margin-bottom: -3vw;
 	}
 	
 	.archive-description.taxonomy-archive-description.taxonomy-description h2,
@@ -333,35 +351,6 @@ Loaded on WooCommerce pages */
 		min-width:1em;
 		display:grid;
 	}
-}
-
-@media all and (min-width: 38em) {
-	
-	.woocommerce ul.products li.product-category,
-	.woocommerce ul.products li.product.first,
-	.woocommerce-page ul.products li.product.first,
-	.woocommerce ul.products li.product,
-	.woocommerce-page ul.products li.product {
-		grid-column: 1;
-	}
-}
-
-@media all and (min-width: 51em) {
-	
-	.woocommerce ul.products li.product-category,
-	.woocommerce ul.products li.product,
-	.woocommerce-page ul.products li.product,
-	.woocommerce-page[class*="columns-"] ul.products li.product,
-	.woocommerce[class*="columns-"] ul.products li.product {
-		grid-column-start: span 1;
-	}
-	
-	.woocommerce ul.products li.product.first,
-	.woocommerce-page ul.products li.product.first {
-		grid-column-start: 1;
-	}
-	
-	
 }
 
 
@@ -550,7 +539,7 @@ Loaded on WooCommerce pages */
 @media all and (min-width: 38em) {
 	
 	.woocommerce .breadcrumb {
-		padding: 0;
+		padding: .5rem 3vw;
 	}
 	
 	.woocommerce div.product {
@@ -1146,7 +1135,7 @@ button.single_add_to_cart_button.single_add_to_cart_button,
 	}
 }
 
-@media all and (min-width: 47.9em) {
+@media all and (min-width: 51em) {
 	.woocommerce div.product form.cart .button {
 		margin: 0 3rem 0 -1.3rem;
 		padding: 2vw 0 3vw 10vw;
