@@ -89,7 +89,7 @@ Loaded on WooCommerce pages */
 		align-items: flex-start;
 		position: absolute;
 		top: 1.1rem;
-		right: 7.5rem;
+		right: 60%;
 		left: 0.3rem;
 		z-index: 250;
 	}
@@ -101,7 +101,7 @@ Loaded on WooCommerce pages */
 		font-weight:800;
 		padding: 0 0 0 1.3rem;
 		text-align: left;
-		width: 35vw;
+		width: 50%;
 		line-height: 1;
 		z-index: 900;
 	}
@@ -119,7 +119,7 @@ Loaded on WooCommerce pages */
 	article.page h1.entry-title,
 	article.page h1.entry-title,
 	.archive.woocommerce h1.page-title {
-		grid-column: 2/4;
+		grid-column: 2;
 		margin: .25rem 3vw 0;
 		padding: 0;
 	}
@@ -169,12 +169,32 @@ Loaded on WooCommerce pages */
 
 @media all and (min-width: 51em) {
 	
+	.woocommerce .breadcrumb {
+		grid-column: 1/4;
+		padding: 0 0 0 16vw;
+	}
+	
+	.archive h1.page-title,
+	article.page h1.entry-title,
+	article.page h1.entry-title,
+	.archive.woocommerce h1.page-title {
+		grid-column: 1/2;
+		margin: .25rem 0;
+		padding: 0 16vw;
+		text-align: left;
+	}
+	
 	.archive.woocommerce .products ul,
 	.archive.woocommerce ul.products {
 		grid-auto-flow: row;
 		grid-template-columns: repeat(3, 27vw);
 		grid-row-start: 3;
 		grid-column-start: 1;
+	}
+	
+	.woocommerce ul.products li.product,
+	.woocommerce ul.products li.product:nth-child(2n) {
+		grid-column: auto;
 	}
 	
 	.woocommerce ul.products li.product .woocommerce-loop-category__title,
@@ -188,7 +208,23 @@ Loaded on WooCommerce pages */
 	
 }
 
-
+@media all and (min-width: 72em) {
+	
+	.woocommerce .breadcrumb {
+		grid-column: 1/4;
+		padding: 0;
+	}
+	
+	.archive h1.page-title,
+	article.page h1.entry-title,
+	article.page h1.entry-title,
+	.archive.woocommerce h1.page-title {
+		grid-column: 1/2;
+		margin: .25rem 0;
+		padding: 0;
+		text-align: left;
+	}
+}
 
 @media all and (min-width: 0) {
 	
@@ -427,6 +463,14 @@ Loaded on WooCommerce pages */
 	}
 }
 
+@media all and (min-width: 51em) {
+	.woocommerce .content .entry {
+		border-bottom: 0;
+		display: grid;
+		margin: 0;
+	}
+}
+
 /* WooCommerce Product
 ---------------------------------------------------------------------------------------------------- */
 @media all and (min-width: 0) {
@@ -539,7 +583,15 @@ Loaded on WooCommerce pages */
 @media all and (min-width: 38em) {
 	
 	.woocommerce .breadcrumb {
-		padding: .5rem 3vw;
+		padding: .5rem 13vw;
+		grid-column: 2/4;
+	}
+	
+	.single-product h1.entry-title {
+		font-size: 3.6rem;
+		font-weight: 400;
+		letter-spacing: -3px;
+		margin: 0;
 	}
 	
 	.woocommerce div.product {
@@ -570,6 +622,7 @@ Loaded on WooCommerce pages */
 	.single-product .entry .summary {
 		grid-column: 1/3;
 		grid-row: 2;
+		margin: 6rem 0;
 	}
 
 }
@@ -579,6 +632,13 @@ Loaded on WooCommerce pages */
 	.woocommerce div.product {
 		grid-template-columns: repeat(12, 8vw);
 		grid-template-rows: auto;
+	}
+	
+	.single-product h1.entry-title {
+		font-size: 4.6rem;
+		font-weight: 400;
+		letter-spacing: -3px;
+		margin: 0;
 	}
 	
 	.woocommerce.single .product_meta {
@@ -595,7 +655,7 @@ Loaded on WooCommerce pages */
 	.woocommerce div.product div.images.woocommerce-product-gallery {
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr 1fr;
-		grid-column: 1/9;
+		grid-column: 2/9;
 		grid-row: 1/12;
 		margin: 0;
 		padding: 0;
@@ -611,10 +671,9 @@ Loaded on WooCommerce pages */
 		display: flex;
 		flex-flow: row;
 		justify-content: space-between;
-		top: 26rem;
-		left: 0;
+		top: 41rem;
+		left: -12vw;
 		width: 25vw;
-		/* position: relative; */
 	}
 	
 	.woocommerce div.product div.images .flex-control-thumbs li {
@@ -628,7 +687,7 @@ Loaded on WooCommerce pages */
 		border-radius: 300%;
 		border: 4px solid #fff;
 		cursor: pointer;
-		opacity: .5;
+		opacity: .75;
 		margin: .1rem;
 		
 	}
@@ -721,18 +780,17 @@ Loaded on WooCommerce pages */
 	
 	.woocommerce div.product .woocommerce-tabs ul.tabs li a,
 	.woocommerce .product .woocommerce-tabs ul.tabs li a:active {
-		background: #bf5;
+		background: #fff;
+		padding: 1rem 1.5rem;
 		color: #006;
-		border-radius: 24px 24px 0 0;
-		padding: 1rem 2.2vw;
 		font: normal 300 normal .8rem/1 Montserrat, sans-serif;
 	}
 	
 	.woocommerce .product .woocommerce-tabs ul.tabs li a:focus,
 	.woocommerce .product .woocommerce-tabs ul.tabs li a:hover {
-		background: #1c3;
+		background: #df5;
 		border-radius: 24px 24px 0 0;
-		color: #fff;
+		color: #006;
 	}
 	
 	.woocommerce div.product .woocommerce-tabs ul.tabs li.active {
