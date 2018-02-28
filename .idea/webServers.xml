@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="8c4cdecd-64eb-40a3-af6c-71a553245a78" name="mommacodes.com" url="http://mommacodes.com">
+        <fileTransfer host="mommacodes.com" port="21" rootFolder="/mommacodes.com">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

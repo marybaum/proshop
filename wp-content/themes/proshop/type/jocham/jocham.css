@@ -1,0 +1,31 @@
+/* @license
+ * MyFonts Webfont Build ID 2487621, 2013-02-22T15:30:25-0500
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: Jocham by Hubert Jocham Type
+ * URL: http://www.myfonts.com/fonts/hubertjocham/jocham/regular/
+ * Copyright: Copyright (c) 2012 by Hubert Jocham. All rights reserved.
+ * 
+ * 
+ * License: http://www.myfonts.com/viewlicense?type=web&buildid=2487621
+ * 
+ * © 2013 MyFonts Inc
+*/
+
+
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("//hello.myfonts.net/count/25f545");
+
+  
+@font-face {
+font-family: 'Jocham-Regular';
+src: url('25F545_0_0.eot');
+src: url('25F545_0_0.eot?#iefix') format('embedded-opentype'),
+	 url('25F545_0_0.woff') format('woff'),
+	 url('25F545_0_0.ttf') format('truetype');}
+ 
