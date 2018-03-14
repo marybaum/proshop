@@ -845,17 +845,22 @@ th:first-child {
 	
 	.site-header {
 		align-self: flex-start;
-		height: 235px;
-		width: 235px;
+		height: 250px;
+		width: 250px;
 		position: fixed;
+	}
+	
+	.home .site-header	{
+		margin: 7rem 0 0 -19vw;
 		z-index: 299;
 	}
 	
-	.home .site-header,
 	.archive .site-header,
 	.single .site-header {
-		margin: 2rem 0 0 -19vw;
+		margin: 2rem 0 0 -12vw;
+		z-index: 299;
 	}
+	
 }
 
 @media all and (min-width: 27em){
@@ -863,50 +868,37 @@ th:first-child {
 	.home .site-header,
 	.archive .site-header,
 	.single .site-header {
-		margin: 2rem 0 0 -15vw;
+		margin: 3rem 0 0 -12vw;
+		height: 320px;
+		width: 320px;
 	}
 	
 }
 
 @media all and (min-width: 38em) {
 	
-	.site-header {
-		width: 300px;
-		height: 300px;
-		
-	}
-	
-	.home .site-header,
-	.archive .site-header {
+	.home .site-header {
 		margin: 7rem 0 0 -9vw;
+		width: 350px;
+		height: 350px;
 	}
 	
-	.single .site-header {
-		margin: 4rem 0 0 -9vw;
-	}
-}
-
-@media all and (min-width: 38em) {
-	
-	.site-header{
-		margin: 10vh 0 0 -7vw;
-		z-index: 399;
-	}
-
 	.single .site-header,
 	.archive .site-header {
-		margin: 2rem 0 0 -9vw;
+		margin: 2rem 0 0 -12vw;
+		width: 400px;
+		height: 400px;
 	}
 }
 
 @media all and (min-width: 51em)    {
 	
 	.home .site-header  {
-		margin: 10vh 0 0 12%;
+		margin: 12rem 0 0 -3rem;
 	}
 	
 	.archive .site-header {
-		margin: -1rem 0 0 3vw;
+		margin: -1rem 0 0 -7vw;
 	}
 	
 	.single .site-header {
@@ -915,21 +907,38 @@ th:first-child {
 	}
 	
 	.woocommerce.single-product .site-header {
-		margin: 18vh 0 0 6vw;
+		margin: 2rem 0 0 -6vw;
 	}
+}
+
+@media all and (min-width: 72em ) {
+	
+	.archive .site-header {
+		margin: 2rem 0 0 -5rem;
+	}
+	
 }
 
 
 @media all and (min-width: 120em) {
 	
 	.archive .site-header {
-		margin: 10vw 0 0 7vw;
+		margin: 5rem 0 0 3rem;
 	}
 	
 	.single .site-header {
 		margin: -2rem 0 0 15vw;
 	}
 
+}
+
+@media all and (min-width: 160em) {
+	
+	.archive .site-header  {
+		margin: 5rem 0 0 16%;
+	}
+	
+	
 }
 
 /** Layout: site-title and main nav **/
@@ -985,7 +994,8 @@ th:first-child {
 		flex-flow: column;
 		align-items: flex-start;
 		justify-content: space-between;
-		height: 6.5rem;
+		font-size: 1rem;
+		height: 6rem;
 	}
 	
 	.single .site-header nav ul {
@@ -997,68 +1007,94 @@ th:first-child {
 	}
 }
 
-@media all and (min-width: 38em) {
+@media all and (min-width: 27em) {
 	
 	.site-header .wrap {
-		margin: 1.5rem 0 0 4.4rem;
-		width: 10rem;
-		height: 12rem;
+		margin: 1.5rem 0 0 21%;
 	}
 	
-	.title-area {
-		width: 11rem;
+	.site-header .title-area   {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 12rem;
 	}
 	
 	h1.site-title a,
 	.site-title a:focus,
 	.site-title a:hover,
 	p.site-title a {
-		height: 4.3rem;
+		background: url(images/pslogofff.svg) 0 0 no-repeat;
+		background-size: contain;
+		display: block;
+		height: 7rem;
+		text-indent: -9999px;
+		padding: 0;
+	}
+	
+	.site-header nav ul {
+		font-size: 1.2rem;
+		height: 9rem;
+		padding: 1.5rem 0 0 .1rem;
+	}
+	
+}
+
+@media all and (min-width: 38em) {
+	
+	.site-header .wrap {
+		margin: 2.1rem 0 0 26%;
+	}
+	
+	.site-header .title-area {
+		width: 100%;
+	}
+	
+	h1.site-title a,
+	.site-title a:focus,
+	.site-title a:hover,
+	p.site-title a {
+		height: 6rem;
 		text-indent: -9999px;
 		padding: 0;
 	}
 	
 	.site-header .widget-area {
-		height: 8rem;
-		top: 4.4rem;
+		height: 9rem;
+		top: 5.1rem;
 	}
 	
 	.site-header nav ul {
-		font-size: 0.8rem;
+		font-size: 1.2rem;
 		height: 8rem;
+		padding: 0;
 	}
+	
 	
 }
 
 @media all and (min-width: 72em) {
 	
 	.site-header .wrap {
-		margin: 1.5rem 0 0 4.4rem;
-		width: 10rem;
-		height: 12rem;
-	}
-	
-	.title-area {
-		width: 11rem;
+		margin: 3rem 0 0 33%;
 	}
 	
 	h1.site-title a,
 	p.site-title a,
 	h1.site-title a:hover,
 	p.site-title a:hover {
-		height: 4.3rem;
-		width: 10rem;
+		height: 6rem;
 	}
 	
 	.site-header .widget-area {
 		height: 8rem;
-		top: 4.4rem;
+		top: 5rem;
 	}
 	
 	.site-header nav ul,
 	.single .site-header nav ul {
-		font-size: 0.9rem;
-		height: 7.75rem;
+		font-size: 1rem;
+		height: 8rem;
 	}
 	
 }
@@ -1200,6 +1236,9 @@ th:first-child {
 	.archive .site-inner,
 	.single .site-inner {
 		background: #fff;
+		display: grid;
+		grid-gap: 0;
+		padding: 0;
 	}
 	
 	.home .site-inner {
@@ -1217,16 +1256,30 @@ th:first-child {
 		max-width: 100%;
 	}
 	
-	.archive .content,
-	.single .content {
-		display: flex;
-		flex-flow: column;
-		align-items: flex-end;
-		padding: 3vw 6vw;
+	.archive.blog .content-sidebar-wrap {
+		display: grid;
+		grid-template-rows: auto;
+		grid-template-columns: repeat(4, 24vw);
+		padding: 1rem 0 0;
+		
 	}
 	
 	.archive .content {
-		padding: 0;
+		display: grid;
+		grid-column: 1/6;
+		grid-template-columns: 1fr;
+		padding: 1rem 0;
+	}
+	
+	.archive .description {
+		display: grid;
+		grid-column: 3/5;
+	}
+	
+	.single .content {
+		display: grid;
+		grid-template-rows: auto;
+		grid-template-columns: repeat(4, 24vw);
 	}
 	
 }
@@ -1234,7 +1287,15 @@ th:first-child {
 @media all and (min-width: 38em)    {
 	
 	.home .site-inner   {
-		background-position: -50vw -10vw;
+		background-position: 40% -3rem;
+		background-size: 153%;
+	}
+	
+	.archive .site-inner {
+		display: grid;
+		margin: 0;
+		padding: 0;
+		
 	}
 	
 	.home .content {
@@ -1242,12 +1303,15 @@ th:first-child {
 		margin: 0;
 	}
 	
-	.content,
-	.archive .content,
 	.single .content {
 		display: grid;
 		grid-template-columns: 17vw 2fr 2fr;
 	}
+	
+	.archive .content {
+		grid-column: 2/5;
+	}
+	
 }
 
 @media all and (min-width: 51em)    {
@@ -1273,12 +1337,13 @@ th:first-child {
 	}
 	
 	.archive .site-inner {
-		margin: 3rem 0 0 13vw;
+		margin: 3rem 3vw 0;
+		padding: 0;
 	}
 	
 	.archive .content {
 		display: grid;
-		grid-template-columns: repeat(3, 27vw);
+		grid-template-columns: repeat(3, 24vw);
 		grid-auto-flow: row;
 	}
 	
@@ -1290,11 +1355,23 @@ th:first-child {
 
 
 @media all and (min-width: 72em) {
-
-
-
-
+	
+	.archive .site-inner,
+	.single .site-inner {
+		max-width: 72em;
+	}
+	
+	.archive .site-inner {
+		margin: 1rem 2.2rem 0;
+		padding: 0;
+	}
+	
+	
+	
 }
+
+
+
 
 /* ## Home-page widget areas
 -------------------------------------------------- */
@@ -1302,7 +1379,7 @@ th:first-child {
 @media all and (min-width: 0) {
 	
 	.homewidgets {
-		margin-top: 15vh;
+		margin: 0;
 		min-height: 90vh;
 		justify-content: end;
 	}
@@ -1314,8 +1391,8 @@ th:first-child {
 	
 	.homegrid2.widget-area {
 		display: grid;
-		grid-template-columns: 1fr 1fr;
-		grid-template-rows: repeat(4, 100px);
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-rows: repeat(9, 100px);
 		grid-gap: .5rem;
 		margin: 0 0 3rem;
 	}
@@ -1323,8 +1400,8 @@ th:first-child {
 	.homegrid2.widget-area #text-14 {
 		background: #006;
 		border-radius: 300%;
-		grid-column: 2;
-		grid-row: 2;
+		grid-column: 3;
+		grid-row: 3;
 		height: 90px;
 		padding: 18px 0 10px 20px;
 		width: 90px;
@@ -1334,8 +1411,8 @@ th:first-child {
 	.homegrid2.widget-area #text-15 {
 		background: #006;
 		border-radius: 300%;
-		grid-column: 1/3;
-		grid-row: 3;
+		grid-column: 3;
+		grid-row: 4;
 		height: 130px;
 		width: 130px;
 		padding: 20px 0 0 40px;
@@ -1346,7 +1423,7 @@ th:first-child {
 		background: #006;
 		border-radius: 300%;
 		grid-column: 2;
-		grid-row: 4;
+		grid-row: 5;
 		height: 160px;
 		width: 160px;
 		padding: 50px 0 10px 50px;
@@ -1378,12 +1455,11 @@ th:first-child {
 	.homegrid3.widget-area,
 	.homegrid4.widget-area {
 		display: grid;
-		grid-template-columns: repeat(4, 1fr);
-		grid-template-rows: repeat(12, 100px);
+		grid-template-columns: repeat(12, 1fr);
+		grid-template-rows: repeat(8, 100px);
 	}
 	
 	.homegrid2.widget-area .widget-wrap {
-		background: #006;
 		border-radius: 300%;
 		color: #fff;
 	}
@@ -1397,21 +1473,25 @@ th:first-child {
 		z-index: 190;
 	}
 	
-	.homegrid2.widget-area #text-14.widget_text {
+	.homegrid2.widget-area #text-14.widget_text  {
 		grid-column: 3;
-		grid-row: 2;
-		height: 110px;
-		padding: 20px 5px 0 35px;
-		width: 110px;
+		grid-row: 6;
+		height: 140px;
+		padding: 1.3rem 2% 0 45%;
+		width: 140px;
 		z-index: 180;
+	}
+	
+	.homegrid2.widget-area #text-14.widget_text h5 a {
+		font-size: .85rem;
 	}
 	
 	.homegrid2.widget-area #text-15.widget_text {
 		grid-row: 5;
 		grid-column: 4;
-		height: 150px;
-		width: 150px;
-		padding: 25px 5px 0 50px;
+		height: 160px;
+		width: 160px;
+		padding: 2.1rem 0 0 36%;
 		z-index: 180;
 	}
 	
@@ -1420,45 +1500,43 @@ th:first-child {
 	}
 	
 	.homegrid2.widget-area #text-16.widget_text {
-		grid-row: 6;
-		grid-column: 2;
-		height: 250px;
-		width: 250px;
-		padding: 60px 10px 0 90px;
+		grid-row: 7;
+		grid-column: 4;
+		height: 230px;
+		width: 230px;
+		padding: 3rem 3% 0 45%;
 	}
 	
 	.homegrid2.widget-area #text-16.widget_text h5 a {
-		font-size: 1.2rem;
+		font-size: 1.1rem;
 	}
 }
 
-/* @media all and (min-width: 38em){
+@media all and (min-width: 72em) {
 	
-	.homegrid1 .widget,
-	.homegrid2 .widget,
-	.homegrid3 .widget,
-	.homegrid4 .widget  {
-		grid-column: 3/5;
-	}
-	
-	.homewidgets .textwidget h5 {
-		border-radius: 52px 0 0 52px;
-		padding: 30px 20px 12px 42px;
-	}
-}
-
-
-/*
-@media all and (min-width: 64em){
-	
-	
-	.homegrid1 .widget-wrap {
+	.homegrid1.widget-area,
+	.homegrid2.widget-area,
+	.homegrid3.widget-area,
+	.homegrid4.widget-area {
 		display: grid;
-		grid-template-columns: 1fr 1fr 1fr;
-		grid-gap: 1rem;
+		grid-template-columns: repeat(12, 1fr);
+		grid-template-rows: repeat(8, 100px);
 	}
+	
+	.homegrid2.widget-area #text-14.widget_text  {
+		grid-column: 3;
+		grid-row: 6;
+		height: 140px;
+		padding: 2.3rem 2% 0 45%;
+		width: 140px;
+		z-index: 180;
+	}
+	
+	.homegrid2.widget-area #text-14.widget_text h5 a {
+		font-size: .85rem;
+	}
+	
 }
-*/
 
 /* # Site Footer
 ---------------------------------------------------------------------------------------------------- */
@@ -1539,14 +1617,14 @@ th:first-child {
 
 @media all and (min-width: 0) {
 	
-	.breadcrumb,
-	.woocommerce .breadcrumb {
+	.breadcrumb {
 		color: #006;
 		font: normal 200 normal .8rem/1.2 Montserrat, sans-serif;
-		grid-column: 2;
+		display: grid;
+		grid-column: 1/10;
 		grid-row: 1;
-		padding: 3vw;
-		text-align: right;
+		padding: 3vw 0 0;
+		text-align: left;
 	}
 	
 	.single .breadcrumb {
@@ -1557,8 +1635,8 @@ th:first-child {
 	.archive-description,
 	.author-box {
 		display: grid;
-		grid-column: 2;
-		margin: 0 5vw;
+		grid-column: 1;
+		margin: 0 3vw;
 	}
 	
 }
@@ -1566,7 +1644,7 @@ th:first-child {
 @media all and (min-width: 38em) {
 	.breadcrumb,
 	.woocommerce .breadcrumb {
-		grid-row: 1;
+		grid-row: 2;
 		grid-column: 2;
 		text-align: left;
 		padding: 1.5vw 0 1.5vw 9vw;
@@ -1661,7 +1739,6 @@ th:first-child {
 .single article header.entry-header,
 .single article h1.entry-title,
 article.page h1.entry-title,
-.woocommerce.single h1.entry-title,
 .archive h1.page-title {
 	display: none;
 }
@@ -1674,19 +1751,20 @@ article.page h1.entry-title,
 		color: #006;
 		font-size: 4rem;
 		letter-spacing: -2px;
-		line-height: 0.6;
+		line-height: 0.8;
 		text-align: right;
 	}
 	
 	h1.archive-title {
-		font-size: 2.7rem;
-		text-align: right;
-		line-height: 0.7;
 		padding: 0;
 	}
 	
 	.tax-product_cat h1.page-title {
 		display: none;
+	}
+	
+	.tax-product_cat.term-balls h1.page-title {
+		grid-column: 2;
 	}
 	
 	.archive h1.entry-title {
@@ -1773,15 +1851,11 @@ article.page h1.entry-title,
 		padding: 0 0 .1em;
 	}
 	
-	.archive.woocommerce .term-description {
-		grid-row: 4;
-		grid-column: 2/4;
-	}
-	
 	.single .entry-background {
 		display: grid;
 	}
 }
+
 
 @media all and (min-width: 64em) {
 	.archive.full-width-content .archive.category .archive-description {
@@ -1889,20 +1963,32 @@ article.page h1.entry-title,
 -------------------------------------------------------------------------- */
 @media all and (min-width: 0) {
 	
-	.archive .entry-header {
+	
+	
+	.archive .entry {
 		position: relative;
-		flex-flow: column;
-		align-items: flex-end;
-		margin: 0;
+	}
+	
+	.archive .entry-header {
+		display: grid;
+		grid-template-columns: 100vw;
+		grid-template-rows: auto;
+		position: relative;
+	}
+	
+	.archive .entry-header img {
+		display: grid;
+		width: 100vw;
+		height: auto;
 	}
 	
 	.archive .entry-title {
 		background: linear-gradient(rgba(0, 0, 50, .6), rgba(0, 0, 0, 0));
 		font-size: 1.6rem;
-		height: 4rem;
+		height: 6rem;
 		letter-spacing: -1px;
 		margin: 0;
-		padding: 0.7rem 6vw 0 25vw;
+		padding: 0.7rem 6vw 0 42vw;
 		position: absolute;
 		top: 0;
 		left: 0;

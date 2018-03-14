@@ -12,7 +12,7 @@
  *
  * @see 	    https://docs.woocommerce.com/document/template-structure/
  * @author 		WooThemes
- * @package 	proshop/Lib/WooCommerce/Templates
+ * @package 	WooCommerce/Templates
  * @version     3.0.0
  */
 
@@ -24,7 +24,7 @@ if ( $related_products ) : ?>
 
 	<section class="related products">
 
-		<h2><?php esc_html_e( 'You might also like', 'woocommerce' ); ?></h2>
+		<h2><?php esc_html_e( 'Related products', 'woocommerce' ); ?></h2>
 
 		<?php woocommerce_product_loop_start(); ?>
 

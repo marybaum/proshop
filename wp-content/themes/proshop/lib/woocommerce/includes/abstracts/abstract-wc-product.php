@@ -1739,12 +1739,12 @@ class WC_Product extends WC_Abstract_Legacy_Product {
 	/**
 	 * Returns the main product image.
 	 *
-	 * @param string $size (default: 'shop_thumbnail')
+	 * @param string $size (default: 'featured-image')
 	 * @param array $attr
 	 * @param bool $placeholder True to return $placeholder if no image is found, or false to return an empty string.
 	 * @return string
 	 */
-	public function get_image( $size = 'shop_thumbnail', $attr = array(), $placeholder = true ) {
+	public function get_image( $size = 'featured-image', $attr = array(), $placeholder = false ) {
 		if ( has_post_thumbnail( $this->get_id() ) ) {
 			$image = get_the_post_thumbnail( $this->get_id(), $size, $attr );
 		} elseif ( ( $parent_id = wp_get_post_parent_id( $this->get_id() ) ) && has_post_thumbnail( $parent_id ) ) {

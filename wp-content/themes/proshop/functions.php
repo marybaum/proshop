@@ -10,6 +10,11 @@
  * @link    http://www.racquetpress.com/
  */
 
+// Child theme (do not remove).
+define( 'CHILD_THEME_NAME', 'Pro_Shop' );
+define( 'CHILD_THEME_URL', 'http://www.racquetpress.com/' );
+define( 'CHILD_THEME_VERSION', '1.0' );
+
 // Start the engine.
 include_once( get_template_directory() . '/lib/init.php' );
 
@@ -55,7 +60,7 @@ include_once( get_stylesheet_directory() . '/lib/woocommerce/woocommerce-notice.
 add_filter( 'woocommerce_product_tabs', 'woo_rename_tabs', 98 );
 function woo_rename_tabs( $tabs ) {
 
-	$tabs['description']['title'] = __( 'Info' );		// Rename the description tab
+	$tabs['description']['title'] = __( 'More Info' );		// Rename the description tab
 	//$tabs['reviews']['title'] = __( 'Ratings' );				// Rename the reviews tab
 	//$tabs['additional_information']['title'] = __( 'Specs and Sizes' );	// Rename the additional information tab
 
@@ -63,10 +68,12 @@ function woo_rename_tabs( $tabs ) {
 
 }
 
-// Child theme (do not remove).
-define( 'CHILD_THEME_NAME', 'Pro_Shop' );
-define( 'CHILD_THEME_URL', 'http://www.racquetpress.com/' );
-define( 'CHILD_THEME_VERSION', '1.0' );
+// Make gallery thumbnails any size bigger than 100px ffs!
+add_filter( 'woocommerce_gallery_thumbnail_size', function( $size ) {
+	return 'thumbnail';
+} );
+
+
 
 // Enqueue Scripts and Styles.
 add_action( 'wp_enqueue_scripts', 'proshop_enqueue_scripts_styles' );
@@ -117,11 +124,11 @@ function proshop_responsive_menu_settings() {
 		'subMenu'           => __( 'Submenu', 'proshop' ),
 		'subMenuIconsClass' => 'dashicons-before dashicons-arrow-down-alt2',
 		'menuClasses'       => array(
-			'combine' => array(
-				'.nav-primary',
-				'.nav-header',
+			'combine'       => array(
+										'.nav-primary',
+										'.nav-header',
 			),
-			'others'  => array(),
+			'others'        => array(),
 		),
 	);
 
